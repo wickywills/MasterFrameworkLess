@@ -1,0 +1,328 @@
+/*	==========================================
+	 0. Contents
+	==========================================
+	
+	1. Fonts
+	2. Global Reset & Standards
+	3. Links
+	4. Lists
+	5. Tables
+	6. Misc
+	7. Typography
+	8. Layout
+	9. Forms
+*/
+
+
+
+
+
+
+/*	==========================================
+	 1. Fonts
+	========================================== */
+
+
+
+
+
+
+/*	==========================================
+	 2. Global Reset & Standards
+	========================================== */
+	
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font: inherit;
+	}
+	html {
+		font-size: 62.5%; 
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+	
+	
+	body { background: #fff; font-family:Arial, Helvetica, sans-serif; font-size: 11px; line-height: 14px; color: #555; position: relative; }
+	
+	img, object, embed { max-width: 100%; height: auto; }
+	img { -ms-interpolation-mode: bicubic; }
+	 
+	 /* Nicolas Gallagher's micro clearfix */
+	 .clearfix:before, .clearfix:after { content:""; display:table; }
+	 .clearfix:after { clear:both; }
+	 .clearfix { zoom:1; } /* For IE6 */
+
+
+
+
+/*	==========================================
+	 3. Links
+	========================================== */
+	a { color: #2a85e8; text-decoration: none; outline: 0; line-height: inherit; }
+	a:hover { color: #11639d; }
+	p a, p a:visited { line-height: inherit; }
+	
+
+
+
+
+/*	==========================================
+	 4. Lists
+	========================================== */
+	ul, ol { margin-bottom: 18px; margin-left:18px; }
+	ul { list-style: disc outside; }
+	ol { list-style: decimal; }
+	ul ul, ol ol { margin: 4px 0 5px 18px; }
+	li { margin-bottom: 12px; }
+	
+
+
+
+
+/*	==========================================
+	 5. Tables
+	========================================== */
+	table { background: #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; width: 100%; margin: 0 0 18px; border: 1px solid #ddd;  }
+	
+	table thead { background: #f5f5f5; }
+	table thead tr th,
+	table thead tr td { text-align: left; padding:4px 0; }
+	table thead tr th { padding: 8px 10px 9px; font-size: 14px; font-weight: bold; color: #222; }
+	table thead tr th:first-child { border-left: none; }
+	table thead tr th:last-child { border-right: none; }
+	
+	table tbody tr.even,
+	table tbody tr.alt { background: #f9f9f9; }
+	table tbody tr:nth-child(even) { background: #f9f9f9; }
+	table tbody tr td { color: #333; padding:4px 0; vertical-align: top; border: none; }
+
+
+
+
+
+/*	==========================================
+	 6. Misc
+	========================================== */
+	.left       { float: left; }
+	.right      { float: right; }
+	.hide     	{ display: none; }
+	.highlight 	{ background: #ff0; }
+	#mobiletest { background: #f00; }
+	
+	@media only screen and (max-width: 767px) {
+		#mobiletest { background: #00f; }
+	}
+
+
+
+
+
+/*	==========================================
+     7. Typography
+	========================================== */
+	h1, h2, h3, h4, h5, h6 { color: #181818; font-weight: bold; line-height: 1.25; }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 46px; margin-bottom: 12px; }
+	h2 { font-size: 35px; margin-bottom: 9px; }
+	h3 { font-size: 28px; margin-bottom: 9px; }
+	h4 { font-size: 21px; margin-bottom: 3px; }
+	h5 { font-size: 18px; font-weight: normal; margin-bottom: 3px;  }
+	h6 { font-size: 15px; font-weight: normal; }
+
+	.subheader { color: #777; font-weight: 300; margin-bottom: 24px; }
+
+	p { line-height: 17px; margin: 0 0 18px; }
+	p img { margin: 0; }
+	p.lead { font-size: 18px; font-size: 1.8rem; line-height: 24px;  }
+	
+	sup { margin:0 0 0 0;}
+	sub { margin:0 0 0 0;}
+	
+		/* Mobile */
+		
+		/*@media handheld, only screen and (max-width: 767px) {
+			body, p {  font-size: 15px; font-size: 1.5rem; line-height: 1.4; }
+		}*/
+	
+	em { font-style: italic; line-height: inherit; }
+	strong { font-weight: bold; line-height: inherit; }
+	small { font-size: 60%; line-height: inherit; }
+	
+	h1 small, h2 small, h3 small, h4 small, h5 small { color: #777; }
+	
+/*	Blockquotes  */
+	blockquote, blockquote p { line-height: 20px; color: #777; }
+	blockquote { margin: 0 0 18px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+	blockquote cite { display: block; font-size: 12px; font-size: 1.2rem; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited { color: #555; }
+	
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 12px 0 18px; height: 0; }
+	
+	abbr, acronym { text-transform: uppercase; font-size: 90%; color: #222; border-bottom: 1px solid #ddd; cursor: help; }
+	abbr { text-transform: none; }
+
+	/* Print */
+	@media print {
+	  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+	  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+	  p a, p a:visited { color: #444 !important; text-decoration: underline; }
+	  p a[href]:after { content: " (" attr(href) ")"; }
+	  abbr[title]:after { content: " (" attr(title) ")"; }
+	  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+	  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+	  tr, img { page-break-inside: avoid; }
+	  @page { margin: 0.5cm; }
+	  p, h2, h3 { orphans: 3; widows: 3; }
+	  h2, h3{ page-break-after: avoid; }
+	}
+
+	
+	 	 
+	 
+	 
+ 
+ 
+/*	==========================================
+	 8. Layout
+	========================================== */
+	 
+	 /* GRID */
+
+	.row { width: 940px; max-width: 100%; min-width: 768px; margin: 0 auto; }
+	.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
+	.row.collapse .column, .row.collapse .columns { padding: 0; }
+	.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
+	.row .row.collapse { margin: 0; }
+
+	.column, .columns { float: left; min-height: 1px; padding: 0 15px; position: relative; box-sizing: border-box }
+	.column.centered, .columns.centered { float: none; margin: 0 auto; }
+
+	[class*="column"] + [class*="column"]:last-child { float: right; }
+
+	[class*="column"] + [class*="column"].end { float: left; }
+
+	.one, .row .one { width: 8.33333%; }
+	.two, .row .two { width: 16.66667%; }
+	.three, .row .three { width: 25%; }
+	.four, .row .four { width: 33.33333%; }
+	.five, .row .five { width: 41.66667%; }
+	.six, .row .six { width: 50%; }
+	.seven, .row .seven { width: 58.33333%; }
+	.eight, .row .eight { width: 66.66667%; }
+	.nine, .row .nine { width: 75%; }
+	.ten, .row .ten { width: 83.33333%; }
+	.eleven, .row .eleven { width: 91.66667%; }
+	.twelve, .row .twelve { width: 100%; }
+
+	.row .offset-by-one { margin-left: 8.33333%; }
+	.row .offset-by-two { margin-left: 16.66667%; }
+	.row .offset-by-three { margin-left: 25%; }
+	.row .offset-by-four { margin-left: 33.33333%; }
+	.row .offset-by-five { margin-left: 41.66667%; }
+	.row .offset-by-six { margin-left: 50%; }
+	.row .offset-by-seven { margin-left: 58.33333%; }
+	.row .offset-by-eight { margin-left: 66.66667%; }
+	.row .offset-by-nine { margin-left: 75%; }
+	.row .offset-by-ten { margin-left: 83.33333%; }
+
+	.push-two { left: 16.66667%; }
+	.pull-two { right: 16.66667%; }
+	.push-three { left: 25%; }
+	.pull-three { right: 25%; }
+	.push-four { left: 33.33333%; }
+	.pull-four { right: 33.33333%; }
+	.push-five { left: 41.66667%; }
+	.pull-five { right: 41.66667%; }
+	.push-six { left: 50%; }
+	.pull-six { right: 50%; }
+	.push-seven { left: 58.33333%; }
+	.pull-seven { right: 58.33333%; }
+	.push-eight { left: 66.66667%; }
+	.pull-eight { right: 66.66667%; }
+	.push-nine { left: 75%; }
+	.pull-nine { right: 75%; }
+	.push-ten { left: 83.33333%; }
+	.pull-ten { right: 83.33333%; }
+
+	
+	 
+	 
+ 
+ 
+/*	==========================================
+	 9. Forms
+	========================================== */
+
+	form { margin: 0 0 18px; }
+	form label { display: block; font-size: 13px; line-height: 18px; cursor: pointer; margin-bottom: 9px; }
+
+	input.input-text, textarea { border-right: 1px solid #bbb; border-bottom: 1px solid #bbb; }
+	input.input-text, textarea, select { display: block; margin-bottom: 9px; }
+	label + input.input-text, label + textarea, label + select, label + div.dropdown, select + div.dropdown { margin-top: -9px; }
+
+	/* Text input and textarea font and padding */
+	input.input-text, textarea { font-size: 13px; padding: 4px 3px 2px; outline: none !important; background: #fff; }
+	input.input-text.oversize, textarea.oversize { font-size: 18px !important; padding: 4px 5px !important; }
+	input.input-text:focus, textarea:focus { background: #f9f9f9; }
+
+	/* Inlined Label Style */
+	input.placeholder, textarea.placeholder { color: #888; }
+
+	/* Text input and textarea sizes */
+	input.input-text, textarea { width: 254px; }
+	input.small, textarea.small { width: 134px; }
+	input.medium, textarea.medium { width: 254px; }
+	input.large, textarea.large { width: 434px; }
+
+	/* Fieldsets */
+	form fieldset { padding: 9px 9px 2px 9px; border: solid 1px #ddd; margin: 18px 0; }
+
+	/* Inlined Radio & Checkbox */
+	div.form-field input[type=radio], div.form-field input[type=checkbox] { display: inline; width:auto; margin-bottom:0; }
+
+	/* Errors */
+	div.form-field.error input, input.input-text.red { border-color: red; background-color: rgba(255,0,0,0.15); }
+	div.form-field.error label, label.red { color: red; }
+	div.form-field.error small, small.error { margin-top: -6px; display: block; margin-bottom: 9px; font-size: 11px; color: red; width: 260px; }
+
+	.small + small.error { width: 140px; }
+	.medium + small.error { width: 260px; }
+	.large + small.error { width: 440px; }
