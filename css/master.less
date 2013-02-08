@@ -2,24 +2,49 @@
 	 0. Contents
 	==========================================
 	
-	1. Fonts
-	2. Global Reset & Standards
-	3. Links
-	4. Lists
-	5. Tables
-	6. Misc
-	7. Typography
-	8. Layout
-	9. Forms
+	1.  LESS
+	2.  Fonts
+	3.  Global Reset & Standards
+	4.  Links
+	5.  Lists
+	6.  Tables
+	7.  Misc
+	8.  Typography
+	9.  Layout
+	10. Forms
 */
 
 
 
 
 
+/*	==========================================
+	 LESS
+	========================================== */
+
+	/* Import and configure Semantic grid (http://sematic.gs) */
+	@import 'grid.less';
+
+	@column-width: 60;
+	@gutter-width: 20;
+	@columns: 12;
+	@total-width: 100%; /* Fluid grid. Remove for fixed px */
+
+
+
+
+	/* CONSTANTS */
+
+
+
+
+	/* MIXINS */
+
+
+
 
 /*	==========================================
-	 1. Fonts
+	 Fonts
 	========================================== */
 
 
@@ -28,7 +53,7 @@
 
 
 /*	==========================================
-	 2. Global Reset & Standards
+	 Global Reset & Standards
 	========================================== */
 	
 	html, body, div, span, applet, object, iframe,
@@ -78,7 +103,7 @@
 	
 	
 	
-	body { background: #fff; font-family:Arial, Helvetica, sans-serif; font-size: 11px; line-height: 14px; color: #555; position: relative; }
+	body { background: #fff; font-family:Arial, Helvetica, sans-serif; font-size: 29px; line-height: 14px; color: #555; position: relative; }
 	
 	img, object, embed { max-width: 100%; height: auto; }
 	img { -ms-interpolation-mode: bicubic; }
@@ -92,7 +117,7 @@
 
 
 /*	==========================================
-	 3. Links
+	 Links
 	========================================== */
 	a { color: #2a85e8; text-decoration: none; outline: 0; line-height: inherit; }
 	a:hover { color: #11639d; }
@@ -103,7 +128,7 @@
 
 
 /*	==========================================
-	 4. Lists
+	 Lists
 	========================================== */
 	ul, ol { margin-bottom: 18px; margin-left:18px; }
 	ul { list-style: disc outside; }
@@ -116,7 +141,7 @@
 
 
 /*	==========================================
-	 5. Tables
+	 Tables
 	========================================== */
 	table { background: #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; width: 100%; margin: 0 0 18px; border: 1px solid #ddd;  }
 	
@@ -137,7 +162,7 @@
 
 
 /*	==========================================
-	 6. Misc
+	 Misc
 	========================================== */
 	.left       { float: left; }
 	.right      { float: right; }
@@ -154,7 +179,7 @@
 
 
 /*	==========================================
-     7. Typography
+     Typography
 	========================================== */
 	h1, h2, h3, h4, h5, h6 { color: #181818; font-weight: bold; line-height: 1.25; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
@@ -221,66 +246,16 @@
  
  
 /*	==========================================
-	 8. Layout
+	 Layout
 	========================================== */
 	 
-	 /* GRID */
+	div.column_1 { 
+		background: #f00;
+		.column(9); }
 
-	.row { width: 940px; max-width: 100%; min-width: 768px; margin: 0 auto; }
-	.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
-	.row.collapse .column, .row.collapse .columns { padding: 0; }
-	.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
-	.row .row.collapse { margin: 0; }
-
-	.column, .columns { float: left; min-height: 1px; padding: 0 15px; position: relative; box-sizing: border-box }
-	.column.centered, .columns.centered { float: none; margin: 0 auto; }
-
-	[class*="column"] + [class*="column"]:last-child { float: right; }
-
-	[class*="column"] + [class*="column"].end { float: left; }
-
-	.one, .row .one { width: 8.33333%; }
-	.two, .row .two { width: 16.66667%; }
-	.three, .row .three { width: 25%; }
-	.four, .row .four { width: 33.33333%; }
-	.five, .row .five { width: 41.66667%; }
-	.six, .row .six { width: 50%; }
-	.seven, .row .seven { width: 58.33333%; }
-	.eight, .row .eight { width: 66.66667%; }
-	.nine, .row .nine { width: 75%; }
-	.ten, .row .ten { width: 83.33333%; }
-	.eleven, .row .eleven { width: 91.66667%; }
-	.twelve, .row .twelve { width: 100%; }
-
-	.row .offset-by-one { margin-left: 8.33333%; }
-	.row .offset-by-two { margin-left: 16.66667%; }
-	.row .offset-by-three { margin-left: 25%; }
-	.row .offset-by-four { margin-left: 33.33333%; }
-	.row .offset-by-five { margin-left: 41.66667%; }
-	.row .offset-by-six { margin-left: 50%; }
-	.row .offset-by-seven { margin-left: 58.33333%; }
-	.row .offset-by-eight { margin-left: 66.66667%; }
-	.row .offset-by-nine { margin-left: 75%; }
-	.row .offset-by-ten { margin-left: 83.33333%; }
-
-	.push-two { left: 16.66667%; }
-	.pull-two { right: 16.66667%; }
-	.push-three { left: 25%; }
-	.pull-three { right: 25%; }
-	.push-four { left: 33.33333%; }
-	.pull-four { right: 33.33333%; }
-	.push-five { left: 41.66667%; }
-	.pull-five { right: 41.66667%; }
-	.push-six { left: 50%; }
-	.pull-six { right: 50%; }
-	.push-seven { left: 58.33333%; }
-	.pull-seven { right: 58.33333%; }
-	.push-eight { left: 66.66667%; }
-	.pull-eight { right: 66.66667%; }
-	.push-nine { left: 75%; }
-	.pull-nine { right: 75%; }
-	.push-ten { left: 83.33333%; }
-	.pull-ten { right: 83.33333%; }
+	div.column_2 { 
+		background: #0f0;
+		.column(3); }
 
 	
 	 
@@ -288,7 +263,7 @@
  
  
 /*	==========================================
-	 9. Forms
+	 Forms
 	========================================== */
 
 	form { margin: 0 0 18px; }
