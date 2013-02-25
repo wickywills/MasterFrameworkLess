@@ -5,6 +5,7 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
+
 	<meta charset="utf-8" />
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"  />
@@ -12,11 +13,7 @@
 	
 	<title>Site name</title>
 	
-	<link rel="stylesheet" href="css/master.less">
-	<link href="styles.less" rel="stylesheet/less" >
-
-	<link href="css/mobile.css" rel="stylesheet" media="screen and (min-width: 0) and (max-width: 479px)" />
-	<link href="css/screen.css" rel="stylesheet" media="screen and (min-width: 960px)" />
+	<link rel="stylesheet" href="style.css">
 	
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="stylesheets/ie.css">
@@ -27,10 +24,24 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	
-	<script src="scripts/jquery.js"></script>
+	<!-- General scripts -->
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="scripts/css3-mediaqueries.js"></script>
 	<script src="scripts/respond.min.js"></script>	
-	<script src="scripts/less-1.1.3.min.js"></script>
+
+	<!-- jQuery Fancybox -->
+	<link rel="stylesheet" href="scripts/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+	<script type="text/javascript" src="scripts/fancybox/source/jquery.fancybox.pack.js?v=2.1.4"></script>
+
+	<!-- jQuery Cycle (if navigation is required, use the full version, else use .min)-->
+	<!--<script type="text/javascript" src="plugins/fancybox/source/jquery.cycle.lite.js"></script>-->
+	<script type="text/javascript" src="scripts/jquery.cycle.all.js"></script>
+
+	<!-- Initialise any plugins used (Lightbox, galleries etc) -->
+	<script src="scripts/plugins.js"></script>	
+
+	<!-- Other framework stuff plus any bespoke scripts go here -->
+	<script src="scripts/site.js"></script>	
 
 	<!-- ************************** -->
 	<!-- GOOGLE ANALYTICS CODE HERE -->
@@ -39,7 +50,21 @@
 </head>
 <body>
 
-<div>fdsadasdas</div>
+<!-- Fancybox example -->
+<a class="fancybox" rel="group" href="https://www.google.co.uk/images/srpr/logo3w.png">Fancybox example</a>
+
+<br><br><br>
+
+<!-- Cycle rotator example -->
+<div id="cycle">
+	<div id="nav"></div>
+	<img src="http://cloud.github.com/downloads/malsup/cycle/beach1.jpg" width="200" height="200" />
+	<img src="http://cloud.github.com/downloads/malsup/cycle/beach2.jpg" width="200" height="200" />
+	<img src="http://cloud.github.com/downloads/malsup/cycle/beach3.jpg" width="200" height="200" />
+	<img src="http://cloud.github.com/downloads/malsup/cycle/beach4.jpg" width="200" height="200" />
+	<img src="http://cloud.github.com/downloads/malsup/cycle/beach5.jpg" width="200" height="200" />
+</div>
+
 	
 </body>
 </html>
