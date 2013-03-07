@@ -1,3 +1,8 @@
-Created by James Wills (http://www.wickywills.com)
+*********************************************
+Framework created by James Wills 
 
-Master framework using LESS
+http://www.wickywills.com
+https://github.com/wickywills
+
+Uses LESS and semantic.gs
+*********************************************
