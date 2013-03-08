@@ -275,7 +275,43 @@
 	 10. Responsive
 	========================================== */
 
+	div.responsinator { 
+		background: #666; 
+		padding: 20px 0;
+		width: 300px;
+		text-align: center;
+		color: #fff;
+		font-size: 50px;
+		font-weight: bold;
+		position: fixed;
+		left: 50%;
+		top: 40%;
+		margin-left: -150px; 
+		border:2px solid #000;
+		opacity: 0.6;
+		z-index: 999;
+	}
+	div.responsinator:after { content: "960"; }
 
+	@media all and (max-width: 960px) {
+		div.responsinator:after { content: "900-959"; }
+	}
+
+	@media all and (max-width: 899px) {
+		div.responsinator:after { content: "899px"; }
+	}
+
+	@media all and (max-width: 767px) {
+		div.responsinator:after { content: "767px"; }
+	}
+
+	@media all and (max-width: 479px) {
+		div.responsinator:after { content: "479px"; }
+	}
+
+	@media all and (max-width: 320px) {
+		div.responsinator:after { content: "320px"; }
+	}
 	
 	 
 	 
