@@ -38,10 +38,32 @@
 
 	/* CONSTANTS */
 
+	/* Adds padding to create 'fake' gutters when semantic.gs gutters are set at 0px */
+	@column_gutter: 10px;
+
+	/* Outer site gutter margin */
+	@outer_gutter: 10px;
+
+	/* Only want the gutter to be added as padding on one side? Use this.. */
+	@column_gutter_one_side: @column_gutter * 2;
+
 
 
 
 	/* MIXINS */
+
+	/* Prevent padding being added to width/height */
+	.border-box { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+	/* Hack for old IE/Firefox versions */
+	.inline-block { display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline; }
+
+	/* Uses @column_gutter constant (added to .column in css/grid.less) */
+	.add_column_gutter {
+		padding-left: @column_gutter;
+		padding-right: @column_gutter;
+		.border-box;
+	}
 
 
 
