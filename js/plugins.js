@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(window).load(function() {
 
 	// Fancybox (http://fancyapps.com/fancybox/)
 	$(".fancybox").fancybox();
